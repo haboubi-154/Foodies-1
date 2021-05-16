@@ -52,7 +52,7 @@ if (isset($userAdd)) {
                 <div class="form-group">
                   <div class="form-group">
                     <label for="sel1">Select user Role</label>
-                    <select class="form-control" name="roleid" id="role">
+                    <select class="form-control" name="roleid" id="roleid">
                       <option value="1">Admin</option>
                       <option value="2">Livraison</option>
                       <option value="3">User only</option>
@@ -60,7 +60,7 @@ if (isset($userAdd)) {
                     </select>
                   </div>
                 </div>
-                <div class="form-groroleid">
+                <div class="form-group">
                   <button type="submit" name="addUser" class="btn btn-success">Register</button>
                 </div>
 
@@ -72,14 +72,14 @@ if (isset($userAdd)) {
         </div>
       </div>
 
-<?php
-}else{
+ <?php
+ }else{
 
   header('Location:index.php');
 
 
 
-}
+ }
  ?>
 
   <?php

@@ -7,20 +7,24 @@ include_once 'lib/Session.php';
 class Users{
 
 
+  // Db Property
   private $db;
 
+  // Db __construct Method
   public function __construct(){
     $this->db = new Database();
   }
 
+  // Date formate Method
    public function formatDate($date){
-
+     // date_default_timezone_set('Asia/Dhaka');
       $strtime = strtotime($date);
     return date('Y-m-d H:i:s', $strtime);
    }
 
 
 
+  // Check Exist Email Address Method
   public function checkExistEmail($email){
     $sql = "SELECT email from  users WHERE email = :email";
     $stmt = $this->db->pdo->prepare($sql);
@@ -35,6 +39,7 @@ class Users{
 
 
 
+  // User Registration Method
   public function userRegistration($data){
     $name = $data['name'];
     $username = $data['username'];
@@ -118,13 +123,13 @@ class Users{
 
 
   }
-
+  // Add New User By Admin
   public function addNewUserByAdmin($data){
     $name = $data['name'];
     $username = $data['username'];
     $email = $data['email'];
     $mobile = $data['mobile'];
-    $roleidid = $data['roleid'];
+    $roleid = $data['roleid'];
     $password = $data['password'];
 
     $checkEmail = $this->checkExistEmail($email);
@@ -205,6 +210,7 @@ class Users{
 
 
 
+  // Select All User Method
   public function selectAllUserData(){
     $sql = "SELECT * FROM users ORDER BY id DESC";
     $stmt = $this->db->pdo->prepare($sql);
@@ -213,7 +219,7 @@ class Users{
   }
 
 
-
+  // User login Autho Method
   public function userLoginAutho($email, $password){
     $password = SHA1($password);
     $sql = "SELECT * FROM users WHERE email = :email and password = :password LIMIT 1";
@@ -223,7 +229,7 @@ class Users{
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_OBJ);
   }
-
+  // Check User Account Satatus
   public function CheckActiveUser($email){
     $sql = "SELECT * FROM users WHERE email = :email and isActive = :isActive LIMIT 1";
     $stmt = $this->db->pdo->prepare($sql);
@@ -236,6 +242,7 @@ class Users{
 
 
 
+    // User Login Authotication Method
     public function userLoginAuthotication($data){
       $email = $data['email'];
       $password = $data['password'];
@@ -298,6 +305,7 @@ class Users{
 
 
 
+    // Get Single User Information By Id Method
     public function getUserInfoById($userid){
       $sql = "SELECT * FROM users WHERE id = :id LIMIT 1";
       $stmt = $this->db->pdo->prepare($sql);
@@ -315,7 +323,8 @@ class Users{
 
 
 
-
+  //
+  //   Get Single User Information By Id Method
     public function updateUserByIdInfo($userid, $data){
       $name = $data['name'];
       $username = $data['username'];
@@ -531,7 +540,7 @@ class Users{
               return $msg;
           }
 
-         }
+        }
 
 
 
