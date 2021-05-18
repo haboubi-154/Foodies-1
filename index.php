@@ -64,7 +64,8 @@ if (isset($activeId)) {
 
         <center>
             <label style="color:  #E3493B;font-weight: bold;font-size: 20px;padding: -2px;">
-            Gestion utilisateurs
+            <li><a  href="div\commentaire-admin.php">gestion commentaire </a></li>
+
         </label>
         </center>
 
@@ -80,7 +81,7 @@ if (isset($activeId)) {
 
         <center>
             <label style="color: #E3493B;font-weight: bold;font-size: 20px;padding: -2px;">
-            Gestion Produits
+            <li><a  href="div\produit_admin.php">gestion produit </a></li>
         </label>
         </center>
 
@@ -96,7 +97,7 @@ if (isset($activeId)) {
 
         <center>
         <label style="color: #E3493B;font-weight: bold;font-size: 20px;padding: -2px;">
-            Gestion Livraisons
+        <li><a  href="div\livraison_admin.php">gestion livraison </a></li>
         </label>
         </center>
 
@@ -112,7 +113,8 @@ if (isset($activeId)) {
 
         <center>
         <label style="color: #E3493B;font-weight: bold;font-size: 20px;padding: -2px;">
-            Gestion Articles
+        <li><a  href="div\categorie_admin.php">gestion categorie </a></li>
+
         </label>
         </center>
 
@@ -128,7 +130,46 @@ if (isset($activeId)) {
 
         <center>
         <label style="color: #E3493B;font-weight: bold;font-size: 20px;padding: -2px;">
-            Gestion Restaurants
+        <li><a  href="div\restaurant_admin.php">gestion restaurant </a></li>
+        </label>
+        </center>
+        <center>
+            <a class="btn btn-primary" style="width: 70px;height: 70px;padding: 2px 2px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;" href="Livraisons.php">
+                <i class='fas fa-hamburger' style="color:white"></i>
+            </a>
+        </center>
+        <center>
+        <label style="color: #E3493B;font-weight: bold;font-size: 20px;padding: -2px;">
+        <li><a  href="div\avis_admin.php">gestion avis </a></li>
+        </label>
+        </center>
+        <center>
+            <a class="btn btn-primary" style="width: 70px;height: 70px;padding: 2px 2px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;" href="Livraisons.php">
+                <i class='fas fa-hamburger' style="color:white"></i>
+            </a>
+        </center>
+        <center>
+        <label style="color: #E3493B;font-weight: bold;font-size: 20px;padding: -2px;">
+        <li><a  href="div\reservation_admin.php">gestion reservation </a></li>
+        </label>
+        </center>
+        <center>
+            <a class="btn btn-primary" style="width: 70px;height: 70px;padding: 2px 2px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;" href="Livraisons.php">
+                <i class='fas fa-hamburger' style="color:white"></i>
+            </a>
+        </center>
+        <center>
+        <label style="color: #E3493B;font-weight: bold;font-size: 20px;padding: -2px;">
+        <li><a  href="div\commande-admin1.php">gestion commande </a></li>
         </label>
         </center>
     </td>
